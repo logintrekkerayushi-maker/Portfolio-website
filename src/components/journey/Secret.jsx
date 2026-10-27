@@ -12,11 +12,12 @@ const OBJECTS = {
   ),
   cat: (
     <svg viewBox="0 0 64 40" width="64" height="40" aria-hidden="true">
-      <path d="M10 34c0-10 6-16 16-16h12c8 0 12 6 12 12v4z" fill="#2b2622" />
-      <path d="M42 20c0-6 4-8 8-8l2 4-2 2 3 5c0 4-3 7-7 7z" fill="#2b2622" />
-      <path d="M46 10l1-6 5 5zM54 10l5-5 1 6z" fill="#2b2622" />
+      <path d="M10 34c0-10 6-16 16-16h12c8 0 12 6 12 12v4z" fill="#3a302b" stroke="#d9c4a5" strokeWidth="1" />
+      <path d="M42 20c0-6 4-8 8-8l2 4-2 2 3 5c0 4-3 7-7 7z" fill="#3a302b" stroke="#d9c4a5" strokeWidth="1" />
+      <path d="M46 10l1-6 5 5zM54 10l5-5 1 6z" fill="#3a302b" stroke="#d9c4a5" strokeWidth="1" />
       <circle cx="50" cy="15" r="1.4" fill="#ffd97a" /><circle cx="55" cy="15" r="1.4" fill="#ffd97a" />
-      <path className="secret__tail" d="M12 30c-6 0-10-4-8-10" fill="none" stroke="#2b2622" strokeWidth="4" strokeLinecap="round" />
+      <path className="secret__tail" d="M12 30c-6 0-10-4-8-10" fill="none" stroke="#3a302b" strokeWidth="4" strokeLinecap="round" />
+      <path className="secret__tail" d="M12 30c-6 0-10-4-8-10" fill="none" stroke="#d9c4a5" strokeWidth="1" strokeLinecap="round" opacity="0.7" />
     </svg>
   ),
   boat: (

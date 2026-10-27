@@ -35,8 +35,9 @@ export function Library() {
           <p className="library__intro">{library.intro}</p>
         </Reveal>
         <Reveal delay={240} className="library__shelf">
-          <Bookshelf />
-          <Secret id="cat" className="library__cat" />
+          <Bookshelf>
+            <Secret id="cat" className="library__cat" />
+          </Bookshelf>
         </Reveal>
       </div>
     </section>

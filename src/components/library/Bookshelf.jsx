@@ -6,7 +6,7 @@ import './Bookshelf.css'
 const FILLER_TONES = ['#5a4636', '#7a6a52', '#3f4c5c', '#6b4a3a', '#4e5d4a', '#8a7a5a', '#44403c', '#6a5a7a']
 function seeded(seed) { let s = seed; return () => { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646 } }
 
-export function Bookshelf() {
+export function Bookshelf({ children }) {
   const books = useMemo(() => {
     const rand = seeded(2027)
     const out = []
@@ -49,6 +49,7 @@ export function Bookshelf() {
         </li>
       </ul>
       <div className="shelf__plank" aria-hidden="true" />
+      {children}
     </div>
   )
 }

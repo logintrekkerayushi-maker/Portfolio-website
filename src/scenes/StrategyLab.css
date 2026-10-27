@@ -37,4 +37,5 @@
 @media (max-width: 760px) {
   .lab__art { animation: none; }
   .lab { padding-bottom: 7rem; }
+  .lab__boat { left: auto; right: 6%; bottom: 4%; }
 }

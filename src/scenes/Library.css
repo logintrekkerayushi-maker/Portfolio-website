@@ -37,9 +37,9 @@
 .library__title { font-size: clamp(2.2rem, 1.4rem + 3.2vw, 4rem); text-shadow: 0 2px 24px rgba(30, 20, 10, 0.7); margin-bottom: var(--space-1); }
 .library__intro { font-family: var(--font-hand); font-size: clamp(1.2rem, 1rem + 0.8vw, 1.6rem); color: #ffe6b3; text-shadow: 0 1px 12px rgba(30, 20, 10, 0.7); }
 .library__shelf { position: relative; }
-.library__cat { left: 3%; bottom: 12px; }
+.library__cat { left: 1.4rem; bottom: 16px; }
 
 @media (max-width: 760px) {
   .library__art { animation: none; }
-  .library__cat { left: 2%; bottom: 10px; transform: scale(0.8); transform-origin: 0 100%; }
+  .library__cat { left: 0.6rem; bottom: 14px; transform: scale(0.8); transform-origin: 0 100%; }
 }
