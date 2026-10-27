@@ -31,10 +31,8 @@ export function Hero() {
           <span>{profile.name}</span>
         </p>
         <h1 id="hero-title" className="hero__title">
-          {profile.headline.split('. ').map((part, i, arr) => (
-            <span key={i} className="hero__title-line">
-              {part}{i < arr.length - 1 ? '.' : ''}
-            </span>
+          {profile.headline.split('\n').map((line, i) => (
+            <span key={i} className="hero__title-line">{line}</span>
           ))}
         </h1>
         <p className="hero__intro">{profile.intro}</p>

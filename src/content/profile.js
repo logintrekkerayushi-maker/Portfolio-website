@@ -6,8 +6,8 @@ export const profile = {
   siteName: 'The Curious Atlas',
   wordmark: 'AYUSHI.EXE',
   name: 'Ayushi Pedulwar',
-  headline: 'Curious by nature. Strategic by design.',
-  tagline: 'the chaos is actually strategic',
+  headline: 'The chaos is\nactually strategic.', // \n = line break; the last line is shown in italics
+  tagline: 'A world of ideas, waiting to be discovered.',
   intro:
     'I connect business thinking, analytical problem-solving and creative storytelling to turn ideas into meaningful outcomes.',
   credentials:
