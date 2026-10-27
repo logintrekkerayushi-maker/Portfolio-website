@@ -76,7 +76,8 @@
 .lab__steps { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: 0.45rem; font-size: var(--text-sm); font-weight: 500; }
 .lab__steps li { display: flex; gap: 0.7rem; align-items: baseline; }
 .lab__step-n { font-family: var(--font-display); color: var(--sage); font-size: 1.05rem; min-width: 1.6rem; }
-.lab__method-note { font-size: var(--text-xs); opacity: 0.65; line-height: 1.5; }
+.lab__method-note { font-size: var(--text-sm); opacity: 0.75; line-height: 1.55; }
+.lab__method-note + .lab__method-note { margin-top: 0.7rem; }
 
 @media (max-width: 900px) {
   .lab__grid { grid-template-columns: 1fr; }

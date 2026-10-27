@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { profile, navigation } from '../../content/profile'
 import './NavBar.css'
 
@@ -24,13 +23,13 @@ export function NavBar() {
 
   return (
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
-      <Link to="/" className="nav__wordmark" aria-label={`${profile.name} — home`}>
+      <a href="#top" className="nav__wordmark" aria-label={`${profile.name} — home`}>
         {profile.wordmark}
-      </Link>
+      </a>
 
       <nav className="nav__links" aria-label="Sections">
         {navigation.map((item) => (
-          <Link key={item.href} to={`/${item.href}`}>{item.label}</Link>
+          <a key={item.href} href={item.href}>{item.label}</a>
         ))}
       </nav>
 
@@ -48,7 +47,7 @@ export function NavBar() {
       <div id="mobile-menu" className={`nav__sheet ${open ? 'nav__sheet--open' : ''}`} hidden={!open}>
         <nav aria-label="Sections">
           {navigation.map((item) => (
-            <Link key={item.href} to={`/${item.href}`} onClick={() => setOpen(false)}>{item.label}</Link>
+            <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
           ))}
         </nav>
       </div>
