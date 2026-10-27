@@ -9,6 +9,10 @@
 import heroLandscape from '../assets/art/hero-landscape.webp'
 import heroLandscapeMobile from '../assets/art/hero-landscape-mobile.webp'
 import heroCanopy from '../assets/art/hero-canopy.png'
+import libraryExterior from '../assets/art/library-exterior.webp'
+import libraryExteriorMobile from '../assets/art/library-exterior-mobile.webp'
+import libraryInterior from '../assets/art/library-interior.webp'
+import libraryInteriorMobile from '../assets/art/library-interior-mobile.webp'
 import cloud01 from '../assets/clouds/cloud-01.png'
 import cloud02 from '../assets/clouds/cloud-02.png'
 import cloud03 from '../assets/clouds/cloud-03.png'
@@ -22,4 +26,14 @@ export const images = {
     alt: 'A sunlit valley with a lake and a castle town, seen from a flowering meadow under enormous clouds.',
   },
   clouds: [cloud01, cloud02, cloud03, cloud04],
+  approach: {
+    exterior: libraryExterior,             // 1335×1190 upscaled board crop (temporary)
+    exteriorMobile: libraryExteriorMobile,
+    alt: 'A castle-like library with pale towers rising above summer trees.',
+  },
+  library: {
+    interior: libraryInterior,             // 1380×940 upscaled board crop (temporary)
+    interiorMobile: libraryInteriorMobile,
+    alt: 'A sunlit library with tall wooden shelves, arched windows and climbing plants.',
+  },
 }

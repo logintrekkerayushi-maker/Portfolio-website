@@ -1,0 +1,19 @@
+.motes { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.mote {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(0.6px);
+  opacity: 0;
+  animation: mote-rise var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+  will-change: transform, opacity;
+}
+.motes--paused .mote { animation-play-state: paused; }
+@keyframes mote-rise {
+  0%   { transform: translate3d(0, 0, 0); opacity: 0; }
+  15%  { opacity: 0.9; }
+  50%  { transform: translate3d(var(--drift), -45vh, 0); }
+  85%  { opacity: 0.6; }
+  100% { transform: translate3d(calc(var(--drift) * -0.6), -90vh, 0); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .motes { display: none; } }
