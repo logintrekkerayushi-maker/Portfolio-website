@@ -1,0 +1,12 @@
+.next-scene {
+  min-height: 70vh;
+  display: grid; place-items: center;
+  padding: var(--space-5) var(--gutter);
+  color: var(--cloud);
+  background: linear-gradient(to bottom, #184537, var(--forest-deep) 60%);
+  text-align: center;
+}
+.next-scene__inner { max-width: 36rem; }
+.next-scene__eyebrow { font-size: var(--text-xs); letter-spacing: 0.28em; text-transform: uppercase; opacity: 0.7; margin-bottom: var(--space-2); }
+.next-scene__title { font-size: clamp(2rem, 1.5rem + 2.5vw, 3.4rem); margin-bottom: var(--space-2); }
+.next-scene__note { opacity: 0.8; }

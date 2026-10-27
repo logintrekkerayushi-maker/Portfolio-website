@@ -1,0 +1,23 @@
+.clouds {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.clouds__sprite {
+  position: absolute;
+  left: 0;
+  min-width: 160px;
+  height: auto;
+  /* start just off the left edge, end just past the right edge */
+  animation: cloud-drift var(--dur) linear infinite;
+  animation-delay: var(--offset);
+  will-change: transform;
+}
+@keyframes cloud-drift {
+  from { transform: translate3d(-100%, 0, 0); }
+  to   { transform: translate3d(100vw, 0, 0); }
+}
+/* With reduced motion the global rule freezes the animation; also park clouds visibly. */
+@media (prefers-reduced-motion: reduce) {
+  .clouds__sprite { animation: none; transform: translate3d(30vw, 0, 0); }
+}

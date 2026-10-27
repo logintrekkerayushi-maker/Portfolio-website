@@ -1,0 +1,40 @@
+/* ---------------------------------------------------------------
+   Design tokens — change colours, fonts and spacing here only.
+   --------------------------------------------------------------- */
+:root {
+  /* Palette from the concept board */
+  --forest: #1B4D3E;
+  --forest-deep: #0F3328;
+  --sage: #6FAF7F;
+  --sky: #7EC8F8;
+  --cloud: #F1F6FF;
+  --coral: #FF8A7A;
+  --ink: #0E2A22;          /* body text on light backgrounds */
+  --paper: #FBF8F1;        /* warm off-white for cards */
+
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+  --font-hand: 'Caveat', cursive;
+
+  /* Type scale (fluid: grows with the screen) */
+  --text-xs: 0.78rem;
+  --text-sm: 0.9rem;
+  --text-md: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.6vw, 1.35rem);
+  --text-display: clamp(2.5rem, 1.3rem + 4.4vw, 4.9rem);
+
+  /* Spacing & shape */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --radius-pill: 999px;
+  --radius-md: 14px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.45, 0, 0.2, 1);
+}
