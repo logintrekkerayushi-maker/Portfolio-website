@@ -43,3 +43,7 @@
   .library__art { animation: none; }
   .library__cat { left: 0.6rem; bottom: 14px; transform: scale(0.8); transform-origin: 0 100%; }
 }
+
+/* the cat sits at the shelf's left edge, so its note opens to the right */
+.library__cat .secret__note { left: -6px; transform: rotate(-1deg); animation: none; }
+.library__cat .secret__note::after { left: 30px; transform: none; }
