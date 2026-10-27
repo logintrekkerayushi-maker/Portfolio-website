@@ -1,16 +1,15 @@
 .approach {
   --p: 0;
   position: relative;
-  min-height: 78svh;
-  display: grid;
-  place-items: center;
+  min-height: 92svh;
   overflow: hidden;
   color: var(--cloud);
   background: var(--forest-deep);
   isolation: isolate;
+  padding: 4rem 0 6rem;
 }
 .approach__art {
-  position: absolute; inset: -12% 0;    /* taller than the section so parallax never shows an edge */
+  position: absolute; inset: -12% 0;
   transform: translate3d(0, calc(var(--p) * -10vh), 0);
   will-change: transform;
 }
@@ -18,27 +17,21 @@
 .approach__shade {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background:
-    linear-gradient(to bottom, var(--forest-deep) 0%, rgba(15, 51, 40, 0) 28%),
-    linear-gradient(to top, #2a1f12 0%, rgba(42, 31, 18, 0.55) 22%, rgba(42, 31, 18, 0) 55%),
-    radial-gradient(70% 60% at 50% 55%, rgba(14, 42, 34, 0) 40%, rgba(14, 42, 34, 0.45) 100%);
+    linear-gradient(to bottom, var(--forest-deep) 0%, rgba(15, 51, 40, 0) 26%),
+    linear-gradient(to top, #2a1f12 0%, rgba(42, 31, 18, 0.6) 20%, rgba(42, 31, 18, 0) 50%),
+    radial-gradient(70% 60% at 50% 50%, rgba(14, 42, 34, 0.05) 30%, rgba(14, 42, 34, 0.5) 100%);
 }
-.approach__copy {
-  position: relative; z-index: 1;
-  text-align: center;
-  padding: var(--space-5) var(--gutter);
-  max-width: 34rem;
-}
+.approach__content { position: relative; z-index: 2; width: min(100% - 2 * var(--gutter), 72rem); margin: 0 auto; }
+.approach__copy { max-width: 22rem; margin: 2.5rem 0 0 auto; text-align: right; }
 .approach__line {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 1.2rem + 2.6vw, 3.2rem);
-  font-style: italic;
-  line-height: 1.15;
-  text-shadow: 0 2px 20px rgba(14, 42, 34, 0.7);
-  margin-bottom: var(--space-2);
+  font-family: var(--font-display); font-style: italic;
+  font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.4rem); line-height: 1.15;
+  text-shadow: 0 2px 20px rgba(14, 42, 34, 0.8); margin-bottom: 0.4rem;
 }
-.approach__sub {
-  font-family: var(--font-hand);
-  font-size: clamp(1.2rem, 1rem + 0.8vw, 1.6rem);
-  opacity: 0.9;
-  text-shadow: 0 1px 12px rgba(14, 42, 34, 0.7);
+.approach__sub { font-family: var(--font-hand); font-size: clamp(1.1rem, 1rem + 0.6vw, 1.4rem); opacity: 0.9; text-shadow: 0 1px 12px rgba(14, 42, 34, 0.8); }
+.approach__mushroom { left: 9%; bottom: 14%; }
+@media (max-width: 760px) {
+  .approach { min-height: 80svh; }
+  .approach__copy { margin-top: 1.5rem; max-width: 16rem; }
+  .approach__art { animation: none; }
 }

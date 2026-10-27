@@ -1,0 +1,18 @@
+.trail {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; overflow: visible;
+  /* 0 → 1 as the scene passes through the viewport (from --p set by useSceneProgress) */
+  --t: clamp(0, calc((var(--p, 0) + 0.55) / 0.85), 1);
+}
+.trail path { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.trail__faint  { stroke: rgba(255, 245, 220, 0.35); stroke-width: 3; stroke-dasharray: 1 12; }
+.trail__bright { stroke: #ffe8b0; stroke-width: 3.5; stroke-dasharray: 1 12; filter: drop-shadow(0 0 6px rgba(255, 220, 140, 0.9)); }
+.trail__reveal { stroke: #fff; stroke-width: 60; stroke-dasharray: 1; stroke-dashoffset: calc(1 - var(--t)); }
+.trail__marker { offset-distance: calc(var(--t) * 100%); offset-rotate: 0deg; }
+.trail__marker-glow { fill: rgba(255, 220, 140, 0.35); animation: marker-pulse 2.4s ease-in-out infinite; }
+.trail__marker-dot { fill: #fff3d0; }
+@keyframes marker-pulse { 0%, 100% { r: 7; opacity: 0.6; } 50% { r: 12; opacity: 0.25; } }
+@supports not (offset-path: path('M0 0 L1 1')) { .trail__marker { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .trail { --t: 1; }
+}

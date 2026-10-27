@@ -10,6 +10,7 @@ export const strategyLab = {
   title: 'Field notes from the clearing.',
   intro:
     'Independent strategy projects: a market diagnosed, a brand positioned, a price structure rebuilt. Each one opens as its own report, designed on its own terms.',
+  mapHint: 'Press a wax seal on the map to read about that expedition.',
   aside: {
     title: 'Reading notes',
     lines: [

@@ -1,40 +1,20 @@
 /* ---------------------------------------------------------------
-   The Library hub: words for the central navigation scene.
+   The Library hub: words for the central scene.
+   The shelf is the navigation: each labelled book is a link.
    --------------------------------------------------------------- */
 export const library = {
   eyebrow: 'The Library',
   title: 'Every atlas needs a reading room.',
-  intro:
-    'This is the heart of the map. Two wings lead out from here: one for strategy and analysis, one for visual and creative work.',
-  wings: [
-    {
-      id: 'strategy',
-      href: '#strategy-lab',
-      icon: 'compass',
-      label: 'West wing',
-      title: 'Strategy Lab',
-      description: 'Research-led thinking on markets, customers and numbers.',
-      areas: ['Business & marketing strategy', 'Market research & consumer insights', 'Business analytics & pricing'],
-      cta: 'Enter the lab',
-    },
-    {
-      id: 'studio',
-      href: '#visual-studio',
-      icon: 'lantern',
-      label: 'East wing',
-      title: 'Visual Studio',
-      description: 'Creative direction, design and visual storytelling.',
-      areas: ['Event visuals & communication', 'Digital design', 'Creative concepts & art direction'],
-      cta: 'Enter the studio',
-    },
-  ],
-  footnotes: [
-    { href: '#about', icon: 'person', label: 'About me' },
-    { href: '#about', icon: 'mail', label: 'Get in touch' },
+  intro: 'Pull a book from the shelf to travel on.',
+  books: [
+    { label: 'Strategy Lab',     href: '#strategy-lab',  tone: 'forest', hint: 'Markets, customers, numbers' },
+    { label: 'Visual Studio',    href: '#visual-studio', tone: 'coral',  hint: 'Design and creative direction' },
+    { label: 'About me',         href: '#about',         tone: 'navy',   hint: 'The person behind the map' },
+    { label: 'Curriculum vitae', href: '#about',         tone: 'ochre',  hint: 'Download at the viewpoint' },
   ],
 }
 
-/* The short outdoor scene between the valley and the library doors. */
+/* The road between the valley and the library. */
 export const approach = {
   line: 'Follow the path through the trees.',
   sub: 'Somewhere past the orchard, a library waits.',

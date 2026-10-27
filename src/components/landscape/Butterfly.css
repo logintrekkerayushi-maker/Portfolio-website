@@ -1,0 +1,5 @@
+.butterfly { position: absolute; left: 0; top: 0; z-index: 3; pointer-events: none; opacity: 0; transition: opacity 1s; will-change: transform; filter: drop-shadow(0 6px 6px rgba(0,0,0,0.35)); }
+.butterfly__wing { transform-origin: 20px 16px; animation: flutter 0.32s ease-in-out infinite alternate; }
+.butterfly__wing--r { animation-name: flutter-r; }
+@keyframes flutter   { from { transform: rotateY(0deg); } to { transform: rotateY(70deg); } }
+@keyframes flutter-r { from { transform: rotateY(0deg); } to { transform: rotateY(-70deg); } }

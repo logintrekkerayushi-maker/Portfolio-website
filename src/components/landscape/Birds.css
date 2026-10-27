@@ -1,0 +1,20 @@
+.birds { position: absolute; top: 16%; left: 0; width: 100%; pointer-events: none; }
+.birds__flock {
+  opacity: 0;
+  animation: flock-cross 70s linear infinite;
+  animation-delay: 6s;
+  will-change: transform;
+}
+@keyframes flock-cross {
+  0%   { transform: translate3d(-15vw, 0, 0) scale(0.9); opacity: 0; }
+  2%   { opacity: 0.7; }
+  18%  { transform: translate3d(55vw, -6vh, 0) scale(0.75); opacity: 0.7; }
+  33%  { transform: translate3d(115vw, -4vh, 0) scale(0.6); opacity: 0.4; }
+  34%  { opacity: 0; }
+  100% { transform: translate3d(115vw, -4vh, 0); opacity: 0; }
+}
+.bird__wing { fill: none; stroke: #1c3a30; stroke-width: 1.8; stroke-linecap: round; transform-origin: 0 0; animation: flap 0.55s ease-in-out infinite alternate; animation-delay: var(--d); }
+.bird__wing--l { animation-name: flap-l; }
+@keyframes flap   { from { transform: scaleY(1); } to { transform: scaleY(-0.6); } }
+@keyframes flap-l { from { transform: scaleY(1); } to { transform: scaleY(-0.6); } }
+@media (prefers-reduced-motion: reduce) { .birds { display: none; } }

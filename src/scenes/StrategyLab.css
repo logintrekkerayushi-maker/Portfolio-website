@@ -8,13 +8,7 @@
   isolation: isolate;
   padding: var(--space-5) 0 9rem;
 }
-
-/* ----- the clearing ----- */
-.lab__art {
-  position: absolute; inset: -10% 0;
-  transform: translate3d(0, calc(var(--p) * -8vh), 0);
-  will-change: transform;
-}
+.lab__art { position: absolute; inset: -10% 0; transform: translate3d(0, calc(var(--p) * -8vh), 0); will-change: transform; }
 .lab__image { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 .lab__rays {
   position: absolute; inset: 0;
@@ -28,97 +22,19 @@
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background:
     linear-gradient(to bottom, #2a1f12 0%, rgba(42, 31, 18, 0) 22%),
-    radial-gradient(70% 60% at 50% 50%, rgba(14, 42, 34, 0.15), rgba(14, 42, 34, 0.55) 100%),
+    radial-gradient(70% 60% at 50% 50%, rgba(14, 42, 34, 0.1), rgba(14, 42, 34, 0.5) 100%),
     linear-gradient(to bottom, rgba(14, 42, 34, 0) 60%, rgba(14, 42, 34, 0.6) 100%);
 }
-.lab__fade {
-  position: absolute; left: 0; right: 0; bottom: 0; height: 18%; z-index: 2; pointer-events: none;
-  background: linear-gradient(to bottom, rgba(15, 51, 40, 0), var(--forest-deep));
-}
+.lab__fade { position: absolute; left: 0; right: 0; bottom: 0; height: 18%; z-index: 2; pointer-events: none; background: linear-gradient(to bottom, rgba(15, 51, 40, 0), var(--forest-deep)); }
 .lab__grass { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.lab__boat { left: 6%; bottom: 9%; z-index: 2; }
 
-/* ----- copy ----- */
-.lab__content {
-  position: relative; z-index: 1;
-  width: min(100% - 2 * var(--gutter), 64rem);
-  margin: 0 auto;
-  padding-top: 3rem;
-}
-.lab__head { text-align: center; max-width: 40rem; margin: 0 auto 5.5rem; }
-.lab__eyebrow { font-size: var(--text-xs); letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: #ffe08a; margin-bottom: var(--space-2); text-shadow: 0 1px 10px rgba(14, 42, 34, 0.8); }
-.lab__title { font-size: clamp(2.2rem, 1.4rem + 3.2vw, 4rem); text-shadow: 0 2px 24px rgba(14, 42, 34, 0.8); margin-bottom: var(--space-2); }
-.lab__intro { font-size: var(--text-lg); opacity: 0.95; text-shadow: 0 1px 12px rgba(14, 42, 34, 0.8); }
-.lab__notes { text-align: center; max-width: 34rem; margin: var(--space-4) auto 0; font-size: var(--text-sm); opacity: 0.85; text-shadow: 0 1px 10px rgba(14, 42, 34, 0.8); }
-.lab__notes p + p { margin-top: 0.4rem; }
-
-/* ----- the signpost ----- */
-.signpost { position: relative; width: min(100%, 58rem); margin: 0 auto; }
-.signpost__post {
-  position: absolute; top: -3.4rem; bottom: -4rem; left: 50%; width: 22px; transform: translateX(-50%);
-  background:
-    linear-gradient(to right, #4a3119, #7a5431 35%, #5b3b20 65%, #3a2612);
-  border-radius: 6px 6px 2px 2px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 8px 0 30px -10px rgba(0,0,0,0.6);
-}
-.signpost__post::after { /* wood grain */
-  content: ''; position: absolute; inset: 0; opacity: 0.35;
-  background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 14px, rgba(0,0,0,0.25) 14px 16px);
-  border-radius: inherit;
-}
-.signpost__cap { position: absolute; top: -10px; left: -6px; right: -6px; height: 14px; background: linear-gradient(#8a6238, #4a3119); border-radius: 4px; }
-.signpost__lantern {
-  position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
-  color: #ffe08a; filter: drop-shadow(0 0 12px rgba(255, 214, 120, 1));
-  animation: lantern-swing 4.5s ease-in-out infinite alternate;
-  transform-origin: 50% -10px;
-}
-@keyframes lantern-swing { from { transform: translateX(-50%) rotate(-5deg); } to { transform: translateX(-50%) rotate(5deg); } }
-
-.signpost__boards { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.4rem; }
-.signboard-row { display: grid; grid-template-columns: 1fr 1fr; }
-.signboard-row--right .signboard { grid-column: 2; margin-left: -4px; }
-.signboard-row--left  .signboard { grid-column: 1; justify-self: end; margin-right: -4px; }
-
-.signboard {
-  --wood-a: #8b5e34; --wood-b: #6b4423; --wood-c: #4f3118;
-  position: relative;
-  display: block;
-  width: min(100%, 27rem);
-  padding: 1.1rem 1.6rem 1.1rem 1.5rem;
-  color: #fff4df;
-  text-decoration: none;
-  background:
-    repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 9px, rgba(0,0,0,0.08) 9px 11px),
-    linear-gradient(to bottom, var(--wood-a), var(--wood-b) 60%, var(--wood-c));
-  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.45));
-  transition: transform 0.45s var(--ease-out), filter 0.45s var(--ease-out);
-  transform-origin: var(--origin, 0 50%);
-}
-.signboard--right { clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%); padding-right: 2.6rem; --origin: 0 50%; }
-.signboard--left  { clip-path: polygon(26px 0, 100% 0, 100% 100%, 26px 100%, 0 50%); padding-left: 2.6rem; --origin: 100% 50%; }
-.signboard:hover, .signboard:focus-visible { transform: translateY(-4px) rotate(calc((var(--i) - 1) * 0.6deg)); filter: drop-shadow(0 20px 24px rgba(0, 0, 0, 0.5)) brightness(1.08); }
-.signboard:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
-
-.signboard__nail { position: absolute; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #d9c4a5, #4a3119); box-shadow: 0 1px 2px rgba(0,0,0,0.6); }
-.signboard--right .signboard__nail--a { left: 10px; } .signboard--right .signboard__nail--b { left: 10px; top: auto; bottom: 10px; }
-.signboard--left  .signboard__nail--a { right: 10px; } .signboard--left  .signboard__nail--b { right: 10px; top: auto; bottom: 10px; }
-
-.signboard__category { display: block; font-size: var(--text-xs); letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: #ffd98a; margin-bottom: 0.3rem; }
-.signboard__title { display: block; font-family: var(--font-display); font-size: clamp(1.25rem, 1rem + 1vw, 1.7rem); line-height: 1.12; margin-bottom: 0.45rem; text-shadow: 0 1px 0 rgba(0,0,0,0.35); }
-.signboard__sub { display: block; font-size: var(--text-xs); line-height: 1.5; opacity: 0.85; margin-bottom: 0.6rem; }
-.signboard__cta { display: inline-flex; align-items: center; gap: 0.35rem; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.06em; color: #ffe8c2; border-bottom: 1px solid rgba(255, 232, 194, 0.5); padding-bottom: 1px; }
-.signboard:hover .signboard__cta svg { transform: translateX(3px); }
-.signboard__cta svg { transition: transform 0.3s var(--ease-out); }
-.signboard__status { position: absolute; top: 10px; right: 2.6rem; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; background: var(--coral); color: var(--forest-deep); padding: 0.1rem 0.5rem; border-radius: var(--radius-pill); }
+.lab__content { position: relative; z-index: 1; width: min(100% - 2 * var(--gutter), 64rem); margin: 0 auto; padding-top: 3rem; }
+.lab__head { text-align: center; max-width: 40rem; margin: 1.5rem auto var(--space-4); }
+.lab__title { font-size: clamp(2.2rem, 1.4rem + 3.2vw, 4rem); text-shadow: 0 2px 24px rgba(14, 42, 34, 0.8); margin-bottom: var(--space-1); }
+.lab__intro { font-family: var(--font-hand); font-size: clamp(1.2rem, 1rem + 0.8vw, 1.6rem); color: #ffe6b3; text-shadow: 0 1px 12px rgba(14, 42, 34, 0.8); }
 
 @media (max-width: 760px) {
-  .signpost { width: 100%; }
-  .lab__head { margin-bottom: 4rem; }
-  .signpost__post { left: 10px; transform: none; }
-  .signpost__lantern { left: 11px; }
-  .signboard-row { grid-template-columns: 1fr; }
-  .signboard-row--right .signboard, .signboard-row--left .signboard { grid-column: 1; justify-self: start; margin: 0 0 0 26px; width: calc(100% - 26px); }
-  .signboard--left { clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%); padding-left: 1.3rem; padding-right: 2.3rem; }
-  .signboard--left .signboard__nail--a, .signboard--left .signboard__nail--b { right: auto; left: 10px; }
   .lab__art { animation: none; }
+  .lab { padding-bottom: 7rem; }
 }

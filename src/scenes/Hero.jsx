@@ -8,6 +8,7 @@ import { Clouds } from '../components/landscape/Clouds'
 import { Canopy } from '../components/landscape/Canopy'
 import { Grass } from '../components/landscape/Grass'
 import { Petals } from '../components/landscape/Petals'
+import { Birds } from '../components/landscape/Birds'
 import { Button } from '../components/ui/Button'
 import { ScrollIndicator } from '../components/ui/ScrollIndicator'
 import './Hero.css'
@@ -44,7 +45,7 @@ export function Hero() {
     <section id="top" ref={ref} className="hero" aria-labelledby="hero-title">
       <div className="hero__art" aria-hidden="true">
         <div className="hero__layer hero__layer--sky"><Painting /></div>
-        <div className="hero__layer hero__layer--clouds"><Clouds /></div>
+        <div className="hero__layer hero__layer--clouds"><Clouds />{!reduced && <Birds />}</div>
         <div className="hero__layer hero__layer--mid"><Painting /></div>
         <div className="hero__layer hero__layer--fore"><Painting /></div>
         <div className="hero__haze" />
