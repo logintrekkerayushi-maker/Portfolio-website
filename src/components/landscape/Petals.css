@@ -1,0 +1,29 @@
+.petals { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.petal {
+  position: absolute; top: -4vh;
+  width: var(--size); height: var(--size);
+  opacity: 0;
+  animation: petal-fall var(--dur) linear infinite;
+  animation-delay: var(--delay);
+  will-change: transform, opacity;
+}
+.petal svg {
+  animation: petal-sway var(--sway) ease-in-out infinite alternate;
+  animation-delay: var(--delay);
+  opacity: 0.9;
+}
+.petals--paused .petal, .petals--paused .petal svg { animation-play-state: paused; }
+
+@keyframes petal-fall {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+  8%   { opacity: 0.95; }
+  90%  { opacity: 0.8; }
+  100% { transform: translate3d(calc(var(--drift) * 1.4), 108vh, 0) rotate(calc(var(--spin) * 240deg)); opacity: 0; }
+}
+@keyframes petal-sway {
+  from { transform: translateX(calc(var(--drift) * -0.5)) rotate(-25deg); }
+  to   { transform: translateX(calc(var(--drift) * 0.5)) rotate(25deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .petals { display: none; }
+}

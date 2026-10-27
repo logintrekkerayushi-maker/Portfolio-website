@@ -1,0 +1,17 @@
+.canopy {
+  position: absolute;
+  top: 0; left: 0;
+  width: clamp(300px, 46vw, 820px);
+  pointer-events: none;
+  transform-origin: 8% 0%;
+  animation: canopy-sway 7.5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.canopy__img { width: 100%; height: auto; }
+@keyframes canopy-sway {
+  from { transform: rotate(-0.6deg) translateY(-2px); }
+  to   { transform: rotate(0.7deg) translateY(3px); }
+}
+@media (max-width: 700px) {
+  .canopy { width: 70vw; }
+}

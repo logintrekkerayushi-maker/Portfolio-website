@@ -1,3 +1,4 @@
+import { Reveal } from '../components/ui/Reveal'
 import './NextScene.css'
 
 /**
@@ -8,11 +9,11 @@ import './NextScene.css'
 export function NextScene({ id, title, note }) {
   return (
     <section id={id} className="next-scene" aria-labelledby={`${id}-title`}>
-      <div className="next-scene__inner">
+      <Reveal className="next-scene__inner">
         <p className="next-scene__eyebrow">Coming in a later stage</p>
         <h2 id={`${id}-title`} className="next-scene__title">{title}</h2>
         <p className="next-scene__note">{note}</p>
-      </div>
+      </Reveal>
     </section>
   )
 }

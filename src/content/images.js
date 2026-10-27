@@ -8,6 +8,7 @@
    --------------------------------------------------------------- */
 import heroLandscape from '../assets/art/hero-landscape.webp'
 import heroLandscapeMobile from '../assets/art/hero-landscape-mobile.webp'
+import heroCanopy from '../assets/art/hero-canopy.png'
 import cloud01 from '../assets/clouds/cloud-01.png'
 import cloud02 from '../assets/clouds/cloud-02.png'
 import cloud03 from '../assets/clouds/cloud-03.png'
@@ -17,6 +18,7 @@ export const images = {
   hero: {
     landscape: heroLandscape,             // desktop, 1666×1004 (temporary)
     landscapeMobile: heroLandscapeMobile, // phones, 900×542 (temporary)
+    canopy: heroCanopy,                   // transparent branches, 440×140 (temporary)
     alt: 'A sunlit valley with a lake and a castle town, seen from a flowering meadow under enormous clouds.',
   },
   clouds: [cloud01, cloud02, cloud03, cloud04],
