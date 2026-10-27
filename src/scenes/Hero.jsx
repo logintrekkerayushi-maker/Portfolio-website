@@ -27,7 +27,6 @@ export function Hero() {
 
       <div className="hero__content">
         <p className="hero__eyebrow">
-          <span>{profile.siteName}</span>
           <span className="hero__eyebrow-rule" aria-hidden="true" />
           <span>{profile.name}</span>
         </p>

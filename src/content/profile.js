@@ -7,7 +7,7 @@ export const profile = {
   wordmark: 'AYUSHI.EXE',
   name: 'Ayushi Pedulwar',
   headline: 'Curious by nature. Strategic by design.',
-  tagline: 'A world of ideas, waiting to be discovered.',
+  tagline: 'the chaos is actually strategic',
   intro:
     'I connect business thinking, analytical problem-solving and creative storytelling to turn ideas into meaningful outcomes.',
   credentials:
