@@ -22,6 +22,9 @@ npm run dev
 - `src/content/images.js` — every image the site uses (swap artwork here)
 - `src/assets/` — artwork, clouds, icons
 - `src/scenes/` — the world's locations (Hero, Library, Strategy Lab, …)
+- `src/pages/` — whole pages: the Home world and the case-study page
+- `src/content/strategyLab.js` — Strategy Lab projects and case-study text (add projects here)
+- `public/cases/` — your full case-study pages, served unchanged at /cases/…
 - `src/components/` — reusable pieces (buttons, navigation, clouds)
 - `src/styles/tokens.css` — colours, fonts, spacing
 - `content-sources/` — source material for later stages (not published)
