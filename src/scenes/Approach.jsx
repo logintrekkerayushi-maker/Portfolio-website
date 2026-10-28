@@ -6,8 +6,6 @@ import { useInView } from '../hooks/useInView'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { Petals } from '../components/landscape/Petals'
 import { Trail } from '../components/journey/Trail'
-import { ChapterCard } from '../components/journey/ChapterCard'
-import { Secret } from '../components/journey/Secret'
 import { Reveal } from '../components/ui/Reveal'
 import './Approach.css'
 
@@ -31,13 +29,11 @@ export function Approach() {
       <Trail shape="down" uid="road" />
 
       <div className="approach__content">
-        <ChapterCard id="road" />
         <Reveal className="approach__copy" delay={150}>
           <p className="approach__line">{approach.line}</p>
           <p className="approach__sub">{approach.sub}</p>
         </Reveal>
       </div>
-      <Secret id="mushroom" className="approach__mushroom" />
     </section>
   )
 }

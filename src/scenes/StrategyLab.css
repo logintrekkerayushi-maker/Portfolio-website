@@ -27,15 +27,13 @@
 }
 .lab__fade { position: absolute; left: 0; right: 0; bottom: 0; height: 18%; z-index: 2; pointer-events: none; background: linear-gradient(to bottom, rgba(15, 51, 40, 0), var(--forest-deep)); }
 .lab__grass { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
-.lab__boat { left: 6%; bottom: 9%; z-index: 2; }
 
 .lab__content { position: relative; z-index: 1; width: min(100% - 2 * var(--gutter), 64rem); margin: 0 auto; padding-top: 3rem; }
-.lab__head { text-align: center; max-width: 40rem; margin: 1.5rem auto var(--space-4); }
+.lab__head { text-align: center; max-width: 40rem; margin: 2rem auto var(--space-3); }
 .lab__title { font-size: clamp(2.2rem, 1.4rem + 3.2vw, 4rem); text-shadow: 0 2px 24px rgba(14, 42, 34, 0.8); margin-bottom: var(--space-1); }
 .lab__intro { font-family: var(--font-hand); font-size: clamp(1.2rem, 1rem + 0.8vw, 1.6rem); color: #ffe6b3; text-shadow: 0 1px 12px rgba(14, 42, 34, 0.8); }
 
 @media (max-width: 760px) {
   .lab__art { animation: none; }
   .lab { padding-bottom: 7rem; }
-  .lab__boat { left: auto; right: 6%; bottom: 4%; }
 }

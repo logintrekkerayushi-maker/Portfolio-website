@@ -22,14 +22,13 @@
     radial-gradient(70% 60% at 50% 50%, rgba(14, 42, 34, 0.05) 30%, rgba(14, 42, 34, 0.5) 100%);
 }
 .approach__content { position: relative; z-index: 2; width: min(100% - 2 * var(--gutter), 72rem); margin: 0 auto; }
-.approach__copy { max-width: 22rem; margin: 2.5rem 0 0 auto; text-align: right; }
+.approach__copy { max-width: 22rem; margin: 1rem 0 0 auto; text-align: right; }
 .approach__line {
   font-family: var(--font-display); font-style: italic;
   font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.4rem); line-height: 1.15;
   text-shadow: 0 2px 20px rgba(14, 42, 34, 0.8); margin-bottom: 0.4rem;
 }
 .approach__sub { font-family: var(--font-hand); font-size: clamp(1.1rem, 1rem + 0.6vw, 1.4rem); opacity: 0.9; text-shadow: 0 1px 12px rgba(14, 42, 34, 0.8); }
-.approach__mushroom { left: 9%; bottom: 14%; }
 @media (max-width: 760px) {
   .approach { min-height: 80svh; }
   .approach__copy { margin-top: 1.5rem; max-width: 16rem; }

@@ -4,13 +4,10 @@ import { library } from '../content/library'
 import { useSceneProgress } from '../hooks/useSceneProgress'
 import { useInView } from '../hooks/useInView'
 import { Motes } from '../components/landscape/Motes'
-import { Bookshelf } from '../components/library/Bookshelf'
-import { ChapterCard } from '../components/journey/ChapterCard'
-import { Secret } from '../components/journey/Secret'
 import { Reveal } from '../components/ui/Reveal'
 import './Library.css'
 
-/** Scene 3 — the library. The bookshelf is the way onward. */
+/** Scene 3 — the library. Three doors, written in light on the painting. */
 export function Library() {
   const ref = useRef(null)
   useSceneProgress(ref)
@@ -29,15 +26,23 @@ export function Library() {
       <div className="library__shade" aria-hidden="true" />
 
       <div className="library__content">
-        <ChapterCard id="library" />
-        <Reveal className="library__head" delay={120}>
+        <Reveal className="library__head">
           <h2 id="library-title" className="library__title">{library.title}</h2>
           <p className="library__intro">{library.intro}</p>
         </Reveal>
-        <Reveal delay={240} className="library__shelf">
-          <Bookshelf>
-            <Secret id="cat" className="library__cat" />
-          </Bookshelf>
+        <Reveal delay={200}>
+          <ul className="doors" aria-label="Where to go next">
+            {library.doors.map((d, i) => (
+              <li key={d.href} className="door" style={{ '--left': `${d.left}%`, '--top': `${d.top}%`, '--tilt': `${d.tilt}deg`, '--i': i }}>
+                <a href={d.href} className="door__link">
+                  <span className="door__glow" aria-hidden="true" />
+                  <span className="door__label">{d.label}</span>
+                  <span className="door__title">{d.title}</span>
+                  <span className="door__hint">{d.hint}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </div>
     </section>

@@ -1,16 +1,14 @@
 /* ---------------------------------------------------------------
-   The Library hub: words for the central scene.
-   The shelf is the navigation: each labelled book is a link.
+   The Library hub: words for the central scene. Each door is a
+   handwritten note floating in the painting.
    --------------------------------------------------------------- */
 export const library = {
-  eyebrow: 'The Library',
   title: 'Every atlas needs a reading room.',
-  intro: 'Pull a book from the shelf to travel on.',
-  books: [
-    { label: 'Strategy Lab',     href: '#strategy-lab',  tone: 'forest', hint: 'Markets, customers, numbers' },
-    { label: 'Visual Studio',    href: '#visual-studio', tone: 'coral',  hint: 'Design and creative direction' },
-    { label: 'About me',         href: '#about',         tone: 'navy',   hint: 'The person behind the map' },
-    { label: 'Curriculum vitae', href: '#about',         tone: 'ochre',  hint: 'Download at the viewpoint' },
+  intro: 'Three doors lead out of here.',
+  doors: [
+    { label: 'West wing',  title: 'Strategy Lab',  hint: 'Markets, customers, numbers',     href: '#strategy-lab',  left: 10, top: 12, tilt: -3 },
+    { label: 'East wing',  title: 'Visual Studio', hint: 'Design and creative direction',   href: '#visual-studio', left: 62, top: 28, tilt: 2 },
+    { label: 'Reading desk', title: 'About me',    hint: 'The person behind the map, and a CV', href: '#about',      left: 24, top: 62, tilt: -2 },
   ],
 }
 

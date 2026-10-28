@@ -7,8 +7,6 @@ import { Motes } from '../components/landscape/Motes'
 import { Grass } from '../components/landscape/Grass'
 import { Butterfly } from '../components/landscape/Butterfly'
 import { Waypoints } from '../components/lab/Waypoints'
-import { ChapterCard } from '../components/journey/ChapterCard'
-import { Secret } from '../components/journey/Secret'
 import { Reveal } from '../components/ui/Reveal'
 import './StrategyLab.css'
 
@@ -32,7 +30,6 @@ export function StrategyLab() {
       <Butterfly active={onScreen} containerRef={ref} />
 
       <div className="lab__content">
-        <ChapterCard id="clearing" />
         <Reveal className="lab__head" delay={120}>
           <h2 id="lab-title" className="lab__title">{strategyLab.title}</h2>
           <p className="lab__intro">{strategyLab.mapHint}</p>
@@ -42,7 +39,6 @@ export function StrategyLab() {
         </Reveal>
       </div>
 
-      <Secret id="boat" className="lab__boat" />
       <div className="lab__grass" aria-hidden="true"><Grass count={110} /></div>
       <div className="lab__fade" aria-hidden="true" />
     </section>
