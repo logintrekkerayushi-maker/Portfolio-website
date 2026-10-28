@@ -5,7 +5,8 @@ import { Hero } from './scenes/Hero'
 import { Approach } from './scenes/Approach'
 import { Library } from './scenes/Library'
 import { StrategyLab } from './scenes/StrategyLab'
-import { NextScene } from './scenes/NextScene'
+import { VisualStudio } from './scenes/VisualStudio'
+import { Viewpoint } from './scenes/Viewpoint'
 
 export default function App() {
   const { progress } = useJourney()
@@ -18,9 +19,8 @@ export default function App() {
         <Approach />
         <Library />
         <StrategyLab />
-        {/* Placeholders so navigation works. Replaced in Stages 6–7. */}
-        <NextScene id="visual-studio" title="The Workshop" note="Visual Studio arrives in Stage 6." />
-        <NextScene id="about" title="The Viewpoint" note="About, contact and CV arrive in Stage 7." />
+        <VisualStudio />
+        <Viewpoint />
       </main>
       <DayCycle progress={progress} />
     </>

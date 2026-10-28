@@ -18,6 +18,8 @@ import strategyClearingMobile from '../assets/art/strategy-clearing-mobile.webp'
 import viewpoint from '../assets/art/viewpoint.webp'
 import viewpointMobile from '../assets/art/viewpoint-mobile.webp'
 import grassDetail from '../assets/art/grass-detail.webp'
+import studioInterior from '../assets/art/studio-interior.webp'
+import studioInteriorMobile from '../assets/art/studio-interior-mobile.webp'
 import cloud01 from '../assets/clouds/cloud-01.png'
 import cloud02 from '../assets/clouds/cloud-02.png'
 import cloud03 from '../assets/clouds/cloud-03.png'
@@ -37,9 +39,14 @@ export const images = {
     alt: 'A sunlit forest clearing with a stream running between mossy banks.',
   },
   viewpoint: {
-    scene: viewpoint,                      // 1386×954 upscaled board crop (temporary) — used in Stage 7
+    scene: viewpoint,                      // 1386×954 upscaled board crop (temporary)
     sceneMobile: viewpointMobile,
     alt: 'A stone viewpoint looking over a lake valley toward distant mountains.',
+  },
+  studio: {
+    interior: studioInterior,              // 1494×949 upscaled board crop (temporary)
+    interiorMobile: studioInteriorMobile,
+    alt: 'A cosy creative workshop with a big window onto trees, a desk of sketchbooks and hanging plants.',
   },
   grassDetail,                             // 968×844 — spare texture for later stages
   approach: {
