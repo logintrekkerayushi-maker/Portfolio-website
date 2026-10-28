@@ -6,7 +6,7 @@ import { useInView } from '../hooks/useInView'
 import { Motes } from '../components/landscape/Motes'
 import { Grass } from '../components/landscape/Grass'
 import { Butterfly } from '../components/landscape/Butterfly'
-import { QuestMap } from '../components/lab/QuestMap'
+import { Waypoints } from '../components/lab/Waypoints'
 import { ChapterCard } from '../components/journey/ChapterCard'
 import { Secret } from '../components/journey/Secret'
 import { Reveal } from '../components/ui/Reveal'
@@ -38,7 +38,7 @@ export function StrategyLab() {
           <p className="lab__intro">{strategyLab.mapHint}</p>
         </Reveal>
         <Reveal delay={240}>
-          <QuestMap />
+          <Waypoints />
         </Reveal>
       </div>
 
